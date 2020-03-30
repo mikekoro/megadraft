@@ -56,7 +56,9 @@ class Example extends React.Component {
   onSave() {
     console.log("save");
   }
-
+  test() {
+    return <button>hi</button>;
+  }
   renderEditor() {
     return (
       <div className="tab-container-editor">
@@ -69,7 +71,8 @@ class Example extends React.Component {
           resetStyleNewLine={this.resetStyleNewLine}
           maxSidebarButtons={this.maxSidebarButtons}
           onAction={this.onAction}
-          movableBlocks={true}
+          movableBlocks={false}
+          extraSidebarActionFn={this.test}
         />
       </div>
     );

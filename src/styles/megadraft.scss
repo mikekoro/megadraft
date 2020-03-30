@@ -24,5 +24,11 @@
 
     .megadraft-block {
         padding-bottom: 40px;
+        &.has-options {
+            display:flex;
+            .main {
+                flex-grow: 100;
+            }
+        }
     }
 }

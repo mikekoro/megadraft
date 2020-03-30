@@ -54,7 +54,6 @@ export default class MegadraftEditor extends Component {
     i18n: i18nConfig,
     language: "en-US"
   };
-
   constructor(props) {
     super(props);
     this.state = {
@@ -109,7 +108,7 @@ export default class MegadraftEditor extends Component {
               isAtomic={blockType === "atomic"}
             />
           ) : (
-            <MegadraftBlock wrapper={data.wrapper} />
+            <MegadraftBlock wrapper={data.wrapper} data={props} />
           )
         });
       }
