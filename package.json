@@ -1,5 +1,5 @@
 {
-  "name": "megadraft",
+  "name": "megadraft-block-action-button",
   "version": "0.7.1",
   "description": "Rich Text editor built on top of draft.js",
   "main": "lib/Megadraft.js",
@@ -139,5 +139,10 @@
   "bugs": {
     "url": "https://github.com/globocom/megadraft/issues"
   },
-  "homepage": "https://github.com/globocom/megadraft#readme"
+  "homepage": "https://github.com/globocom/megadraft#readme",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "tests"
+  }
 }
