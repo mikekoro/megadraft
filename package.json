@@ -86,7 +86,8 @@
     "lint:watch": "esw -w src tests website",
     "watch": "babel -d lib/ src/ --watch",
     "precommit": "lint-staged",
-    "eslint-check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check"
+    "eslint-check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
+    "postinstall": "cd ./node_modules/megadraft && npm install && npm run build:lib && gulp sass && gulp sass-copy"
   },
   "lint-staged": {
     "*.js": [
