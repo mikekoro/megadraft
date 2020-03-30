@@ -71,7 +71,7 @@ class Example extends React.Component {
           resetStyleNewLine={this.resetStyleNewLine}
           maxSidebarButtons={this.maxSidebarButtons}
           onAction={this.onAction}
-          movableBlocks={false}
+          movableBlocks={true}
           extraSidebarActionFn={this.test}
         />
       </div>

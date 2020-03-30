@@ -106,6 +106,7 @@ export default class MegadraftEditor extends Component {
               isLastBlock={this.isLastBlock}
               onAction={this.onAction}
               isAtomic={blockType === "atomic"}
+              data={props}
             />
           ) : (
             <MegadraftBlock wrapper={data.wrapper} data={props} />

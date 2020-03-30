@@ -93,7 +93,8 @@ const Controlled = ({
   swapUp,
   swapDown,
   onAction,
-  children
+  children,
+  data
 }) => {
   const onClickUp = () => swapUp(keySwapUp);
   const onClickDown = () => swapDown(keySwapDown);
@@ -101,7 +102,7 @@ const Controlled = ({
   const isLast = isLastBlock(keySwapDown);
 
   return (
-    <MegadraftBlock>
+    <MegadraftBlock data={data}>
       <Control
         id={
           keySwapUp !== keySwapDown ? `${keySwapUp}-${keySwapDown}` : keySwapUp
@@ -122,7 +123,8 @@ export default ({
   isFirstBlock,
   isLastBlock,
   onAction,
-  isAtomic
+  isAtomic,
+  data
 }) => {
   const arrayChildren = React.Children.toArray(children);
   const firstChildKey = arrayChildren[0].props.children.key;
@@ -133,6 +135,7 @@ export default ({
     const currentKey = child.props.children.key;
     return (
       <Controlled
+        data={data}
         keySwapUp={currentKey}
         keySwapDown={currentKey}
         {...{ swapUp, swapDown, isFirstBlock, isLastBlock, onAction, isAtomic }}
